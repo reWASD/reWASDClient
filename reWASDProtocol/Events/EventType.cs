@@ -1,7 +1,7 @@
 ﻿/*
  *    Http protocol data structure.
  *
- *    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
+ *    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
  */
 
 using Newtonsoft.Json;
@@ -39,7 +39,7 @@ namespace reWASDProtocol.Events
         ExternalDeviceFirmwareOutdated,
         CompositeSettingsChanged,
         HoneypotPairingRejected,
-
+        PreferencesChanged,
 
         // UI Events. prefixed with capital UI. used to display messages to user
         UIAllControllersDisconnected = 1000, 

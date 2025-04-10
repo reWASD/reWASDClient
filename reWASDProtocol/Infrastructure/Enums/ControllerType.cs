@@ -1,7 +1,7 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
 */
 
 using Newtonsoft.Json.Converters;
@@ -148,6 +148,16 @@ namespace reWASDProtocol.Infrastructure.Enums
         FlydigiVader3Pro = 65,
         [Description("DarkWalker ShotPad")]         // DarkWalker ShotPad
         DarkWalkerShotPad = 66,
+        [Description("Azeron Cyborg V2")]           // Azeron Cyborg V2 (2024 version with additional button)
+        AzeronCyborgV2 = 67,
+        [Description("HORI Wireless HORIPAD for Steam")] // HORI Wireless HORIPAD for Steam
+        HoripadSteam = 68,
+        [Description("Flydigi Vader 4 Pro")]        // Flydigi Vader 4 Pro
+        FlydigiVader4Pro = 69,
+        [Description("Alpakka")]                    // Alpakka
+        Alpakka = 70,
+        [Description("Flydigi Apex 4")]             // Flydigi Apex 4
+        FlydigiApex4 = 71,
 
         // Special controllers
         [Description("Sensor")]
@@ -160,6 +170,8 @@ namespace reWASDProtocol.Infrastructure.Enums
         AokzoeA1 = 201,
         [Description("ASUS ROG Ally")]              // ASUS ROG Ally
         AsusRogAlly = 202,
+        [Description("ASUS ROG Ally X")]            // ASUS ROG Ally X
+        AsusRogAllyX = 203,
 
         [Description("Mobile Gamepad")]
         EngineController = 500, // Is used by Service. Represents "gamepad" layout in UI
@@ -177,6 +189,11 @@ namespace reWASDProtocol.Infrastructure.Enums
         [Description("Mobile Mouse Touchpad")]
         EngineController_MouseTouchpad = 505,
         //
+
+        [Description("Virtual Input Keyboard")]
+        EngineController_VirtualInputKeyboard = 600,    // Virtual Input Keyboard
+        [Description("Virtual Input Mouse")]
+        EngineController_VirtualInputMouse = 601,       // Virtual Input Mouse
 
         [Description("Keyboard")]
         Keyboard = 1000,

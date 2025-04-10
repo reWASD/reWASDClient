@@ -1,7 +1,7 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
 */
 
 using Newtonsoft.Json.Converters;

@@ -1,7 +1,7 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
 */
 
 using Newtonsoft.Json.Converters;
@@ -21,6 +21,10 @@ namespace reWASDProtocol.Infrastructure.Enums
         Mouse,
         [Description("Composite")]
         Composite,
+        [Description("VirtualInputKeyboard")]
+        VirtualInputKeyboard,
+        [Description("VirtualInputMouse")]
+        VirtualInputMouse,
         [Description("Unknown")]
         Unknown
 

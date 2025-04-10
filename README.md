@@ -16,4 +16,4 @@ The source code can be fully adapted to suit individual needs.
 ## Requirements
 
 * Visual Studio 2022
-* reWASD 7.2 or higher
+* reWASD 9.1 or higher

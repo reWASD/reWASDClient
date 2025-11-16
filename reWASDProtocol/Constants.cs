@@ -8,6 +8,6 @@ namespace reWASDProtocol
 {
     public static class Constants
     {
-        public const string VERSION_PROTOCOL = "v2.2";
+        public const string VERSION_PROTOCOL = "v2.3";
     }
 }

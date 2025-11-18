@@ -1,18 +1,17 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
     /**
      * List of unique identifiers. for each case and each button - this id should be unique, no matter if button text is matching
      */
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<EnableRemapButtonAction>))]
     public enum EnableRemapButtonAction
     {
         NoAction = 0, // pressing this button should not result calling EnableRemap again. It's just for information. Usually with text like "Cancel" or "OK"

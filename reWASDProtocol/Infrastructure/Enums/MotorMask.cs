@@ -1,9 +1,9 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+﻿
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<MotorMask>))]
     [Flags]
     public enum MotorMask: byte
     {

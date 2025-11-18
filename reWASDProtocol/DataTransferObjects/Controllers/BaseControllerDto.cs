@@ -1,17 +1,22 @@
 ﻿/*
 *    Http protocol data structure.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
 using reWASDProtocol.Infrastructure.Enums;
 using reWASDProtocol.Infrastructure;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.DataTransferObjects.Controllers
 {
-    public abstract class BaseControllerDto
+    [JsonPolymorphic(TypeDiscriminatorPropertyName = "DataType")]
+
+    [JsonDerivedType(typeof(ControllerDto), typeDiscriminator: "Controller")]
+    [JsonDerivedType(typeof(PeripheralControllerDto), typeDiscriminator: "PeripheralController")]
+    [JsonDerivedType(typeof(CompositeControllerDto), typeDiscriminator: "CompositeController")]
+    public abstract record BaseControllerDto
     {
-        public string DataType { get; init; } = "";
         public Guid Guid { get; init; }
         public bool IsDebug { get; init; }
         public List<ulong> Ids { get; init; } = [];

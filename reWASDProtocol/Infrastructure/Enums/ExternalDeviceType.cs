@@ -1,16 +1,15 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
-using Newtonsoft.Json.Converters;
 using System.ComponentModel;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<ExternalDeviceType>))]
     public enum ExternalDeviceType
     {
         [Description("Bluetooth")]
@@ -23,6 +22,8 @@ namespace reWASDProtocol.Infrastructure.Enums
         ESP32S2,
         [Description("ESP32-S3")]
         ESP32S3,
+
+        LastIndex = ESP32S3,
 
         NotSelected = 1000
     }

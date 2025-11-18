@@ -1,18 +1,17 @@
 ﻿/*
  *    Http protocol data structure.
  *
- *    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+ *    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
  */
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Events
 {
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<EventType>))]
     public enum EventType
     {
-        // data events. used to notify client that somewthing is changed and needs to be updated
+        // data events. used to notify client that something is changed and needs to be updated
         Heartbeat,
         ServiceProfilesChanged,
         ConfigApplied,
@@ -40,6 +39,7 @@ namespace reWASDProtocol.Events
         CompositeSettingsChanged,
         HoneypotPairingRejected,
         PreferencesChanged,
+        ExclusiveAccessChanged,
 
         // UI Events. prefixed with capital UI. used to display messages to user
         UIAllControllersDisconnected = 1000, 

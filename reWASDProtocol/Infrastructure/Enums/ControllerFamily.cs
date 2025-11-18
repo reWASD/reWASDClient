@@ -1,16 +1,15 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
-using Newtonsoft.Json.Converters;
 using System.ComponentModel;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<ControllerFamily>))]
     public enum ControllerFamily
     {
         [Description("Gamepad")]

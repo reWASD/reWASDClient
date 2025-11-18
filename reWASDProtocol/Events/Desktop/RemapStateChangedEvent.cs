@@ -1,21 +1,16 @@
 ﻿/*
 *    Http protocol data structure.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
 using reWASDProtocol.Infrastructure.Enums;
 
 namespace reWASDProtocol.Events.Desktop
 {
-    public class RemapStateChangedEvent : BaseControllerEvent
+    public class RemapStateChangedEvent(Guid controllerGuid, string controllerDisplayName, RemapState remapState)
+        : BaseControllerEvent(controllerGuid, controllerDisplayName, EventType.RemapStateChanged)
     {
-        public RemapState RemapState;
-
-        public RemapStateChangedEvent(Guid controllerGuid, string controllerDisplayName, RemapState remapState) : 
-            base(controllerGuid, controllerDisplayName, EventType.RemapStateChanged)
-        {
-            RemapState = remapState;
-        }
+        public RemapState RemapState { get; init; } = remapState;
     }
 }

@@ -1,21 +1,16 @@
 ﻿/*
 *    Http protocol data structure.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
 using reWASDProtocol.DataTransferObjects.Controllers;
 
 namespace reWASDProtocol.Events.Desktop
 {
-    public class ControllerConnectedUIEvent : IBaseEvent
+    public class ControllerConnectedUIEvent(BaseControllerDto controller) : IBaseEvent
     {
         public EventType Type => EventType.UIControllerAdded;
-        public BaseControllerDto Controller;
-
-        public ControllerConnectedUIEvent(BaseControllerDto controller)
-        {
-            Controller = controller;
-        }
+        public BaseControllerDto Controller { get; init; } = controller;
     }
 }

@@ -1,7 +1,7 @@
 ﻿/*
 *    Http protocol data structure.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
 using reWASDProtocol.Infrastructure.Enums;
@@ -9,7 +9,7 @@ using reWASDProtocol.Infrastructure;
 
 namespace reWASDProtocol.DataTransferObjects.Controllers
 {
-    public class ControllerDto : BaseControllerDto
+    public record ControllerDto : BaseControllerDto
     {
         public ControllerType ControllerType { get; init; }
         public ConnectionType ConnectionType { get; init; }
@@ -25,8 +25,11 @@ namespace reWASDProtocol.DataTransferObjects.Controllers
         public bool HasTouchpad { get; init; }
         public bool HasChatpad { get; init; }
         public bool IsExclusiveAccessSupported { get; init; }
+        public bool IsRawHidSupported { get; init; }
         public bool IsRightHandDevice { get; init; }
         public bool IsPhysicalOutputAndDebugSupported { get; init; }
         public bool IsInvalidType { get; init; }
+        public bool IsExclusiveAccessFailed { get; init; }
+        public string? ExclusiveAccessAppName { get; init; }
     }
 }

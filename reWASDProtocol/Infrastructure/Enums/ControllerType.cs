@@ -1,17 +1,16 @@
 /*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
-using Newtonsoft.Json.Converters;
 using System.ComponentModel;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
     // DO NOT CHANGE ORDER OF ITEMS
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<ControllerType>))]
     public enum ControllerType
     {
         [Description("Unknown")]
@@ -158,6 +157,20 @@ namespace reWASDProtocol.Infrastructure.Enums
         Alpakka = 70,
         [Description("Flydigi Apex 4")]             // Flydigi Apex 4
         FlydigiApex4 = 71,
+        [Description("8BitDo Ultimate 2 Wireless")]
+        _8BitDoUltimate2Wireless = 72,
+        [Description("Azeron Keyzen")]              // Azeron Keyzen
+        AzeronKeyzen = 73,
+        [Description("Flydigi Apex 5")]             // Flydigi Apex 5
+        FlydigiApex5 = 74,
+        [Description("Nintendo Switch 2 Pro")]      // Nintendo Switch 2 Pro
+        NintendoSwitch2Pro = 75,
+        [Description("Nintendo Switch Joy-Con 2 L")] // Joy-Con L for Nintendo Switch 2
+        NintendoSwitch2JoyConL = 76,
+        [Description("Nintendo Switch Joy-Con 2 R")] // Joy-Con R for Nintendo Switch 2
+        NintendoSwitch2JoyConR = 77,
+        [Description("GameCube")]                   // GameCube controller for Nintendo Switch 2
+        NintendoSwitch2GameCube = 78,
 
         // Special controllers
         [Description("Sensor")]

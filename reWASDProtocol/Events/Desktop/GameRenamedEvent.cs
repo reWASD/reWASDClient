@@ -1,21 +1,15 @@
 ﻿/*
 *    Http protocol data structure.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
 namespace reWASDProtocol.Events.Desktop
 {
-    public class GameRenamedEvent : IBaseEvent
+    public class GameRenamedEvent(Guid id, string newName) : IBaseEvent
     {
-        public GameRenamedEvent(Guid id, string newName)
-        {
-            Id = id;
-            NewName = newName;
-        }
-
         public EventType Type => EventType.GameRenamed;
-        public Guid Id { get; init; }
-        public string NewName { get; init; }
+        public Guid Id { get; init; } = id;
+        public string NewName { get; init; } = newName;
     }
 }

@@ -1,15 +1,15 @@
 ﻿/*
 *    Infrastructure enumaration.
 *
-*    Copyright (c) 2025 Disc Soft FZE LLC. All rights reserved.
+*    Copyright (c) 2023 Disc Soft FZE LLC. All rights reserved.
 */
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
+using System.Text.Json.Serialization;
 
 namespace reWASDProtocol.Infrastructure.Enums
 {
-    [JsonConverter(typeof(StringEnumConverter))]
+    [JsonConverter(typeof(JsonStringEnumConverter<ConnectionType>))]
     public enum ConnectionType
     {
         Wired = 0,
